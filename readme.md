@@ -32,7 +32,7 @@ Podemos separar um erro em nodejs em duas partes:
 
 1- Mostra exatamente o arquivo e linha onde foi disparado o erro.
 
-O erro ocorreu no arquivo "topic1.js" : (na linha) na linha número dois.
+O erro ocorreu no arquivo "topic1.js" : na linha número dois.
 
 */home/willian/projects/artigo-erros-nodejs/src/topic1.js:2*
 

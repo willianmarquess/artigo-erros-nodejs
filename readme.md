@@ -111,7 +111,7 @@ Ao executar o código temos a seguinte saída:
 
 ![console tópico 4](./imgs/topic4.png "console tópico 4")
 
-Temos uma simulação de serviço que fica rodando eternamente, mas agora fica a dúvida, se caso um erro estourar nesta aplicação? O que acontece?
+Temos uma simulação de serviço que fica rodando eternamente, mas agora fica a dúvida, se caso um erro estourar nesta aplicação, O que acontece?
 
 ![console tópico 4.2](./imgs/topic4_2.png "console tópico 4.2")
 

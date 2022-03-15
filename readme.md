@@ -186,6 +186,39 @@ Quando criamos uma tarefa assíncrona e não esperamos o resultado desta tarefa,
 
 Como podemos resolver este problema?
 
+Existem basicamente duas formas de resolver este problema
+
+1. Usar callback (não recomendado).
+2. Usar Promises.
+
+Vejamos o exemplo da solução usando callback:
+
+```javascript
+setInterval(() => {
+    console.log('servidor rodando eternamente')
+    main()
+}, 500)
+
+function main() { 
+    simulation((error, result) =>{
+        if(error){
+            console.log(error);
+        }
+    })
+}
+
+function simulation(callback){
+    setTimeout(() => {
+            callback(new Error('oops'))
+    }, 2000)
+}
+```
+
+Para resolver o problema utilizando callback, primeiramente adicionamos um callback como parâmetro da função "simulation", e fazemos a invocação do callback passando um erro como parâmetro, ou seja, quando a função assíncrona for executar ela também vai chamar a função callback que irá receber um erro. Desta forma, na função "main" conseguimos passar uma função callback como argumento na invocação da função "simulation", e como padrão os callbacks devem recebem dois parâmetros, o primeiro é um possivel erro (no nosso caso devolvemos um erro), e o segundo é o resultado da função assíncrona.Já que agora no callback podemos receber um erro, podemos realizar o tratamento deste erro.
+
+
+Agora vamos resolver utilizando Promises (boa prática)
+
 ```javascript
 setInterval(() => {
     console.log('servidor rodando eternamente')

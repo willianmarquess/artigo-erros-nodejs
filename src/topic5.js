@@ -38,21 +38,43 @@ function simulation(){
     })
 }*/
 
+//usando callback
+
 setInterval(() => {
     console.log('servidor rodando eternamente')
     main()
 }, 500)
 
 function main() { 
-    simulation().catch(error => {
-        console.log(error)
+    simulation((error, result) =>{
+        if(error){
+            console.log(error);
+        }
     })
 }
 
-function simulation(){
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            reject(new Error('oops'))
-        }, 2000)
-    })
+function simulation(callback){
+    setTimeout(() => {
+            callback(new Error('oops'))
+    }, 2000)
 }
+
+
+// setInterval(() => {
+//     console.log('servidor rodando eternamente')
+//     main()
+// }, 500)
+
+// function main() { 
+//     simulation().catch(error => {
+//         console.log(error)
+//     })
+// }
+
+// function simulation(){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             reject(new Error('oops'))
+//         }, 2000)
+//     })
+// }

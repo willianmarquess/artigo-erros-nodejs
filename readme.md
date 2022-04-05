@@ -1,6 +1,6 @@
 # Entendendo erros para criar soluções (Node JS)
 
-Quando estamos desenvolvendo software é de suma importância entender os erros que dão na aplicação, pois ao entender os erros conseguimos criar melhores soluções.
+Quando estamos desenvolvendo software é importânte entender os erros que acontecem na aplicação, pois o entendimento dos erros possibilita a criação de melhores soluções.
 
 O objetivo deste artigo é entender os erros em Nodejs seguindo os seguintes tópicos:
 
